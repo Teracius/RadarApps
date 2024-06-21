@@ -52,10 +52,18 @@ export default function VideoScreen(props) {
 
   // I was trying to save all the refs pointing in one persisting
   // array, saving the exaact minute and second
-  // that de user left the video and show it in other screen, sorted in one
+  // that the user left the video and show it in other screen, sorted in one
   // list, thoses videos in the exact same point
   // this function do that, but I couldnt put it because of the time that
   // I  had.
+  // The next part would it be create other screen/view
+  // then call with AsyncStorage, the array that have all the info of all
+  // the videos with the ref of that point in time that every video have
+  // then using the same Flatlist that we used in Home and the same API of
+  // youtube bring the thumbnail, the title, description and the vidie itself
+  // and finally, give to the videos the ref, to have a list with the videos
+  // with the minute that the user left the video.
+
   const storageData = async () => {
     // AsyncStorage.clear();
     let time = await playerRef.current.getCurrentTime();
